@@ -1,6 +1,5 @@
 body {
-    background: url(/assets/jaaj.png) fixed center;
-    background-repeat: no-repeat;
+    background-color: lightsteelblue;
 }
 
 .container {
@@ -8,8 +7,9 @@ body {
     flex-direction: column;
     max-width: 600px;
     margin: auto;
+    height: auto;
     background-color: grey;
-    padding: 17px;
+    padding: 20px;
 
 }
 
@@ -80,7 +80,10 @@ header>h1 {
 .drops {
     display: flex;
     justify-content: space-evenly;
+    gap: 20px;
+    text-align: center;
 }
+
 
 
 .meal {
@@ -124,6 +127,73 @@ header>h1 {
 
 
 label {
-    font-size: 25px;
-    font-weight: 500px;
+    font-size: 23px;
+
+}
+
+
+.priceintervall {
+    display: flex;
+    flex-direction: row;
+    gap: 85px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 10px;
+}
+
+.eyes-section {
+    display: flex;
+    flex-direction: row;
+    gap :15px;
+}
+
+.price-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap:30px;
+    margin-block-end: 5%;
+}
+
+.company {
+    
+    color: #003D63CC !important;
+}
+
+
+.customize {
+    padding: 25px;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+#slider {
+    height: 10px;
+    background-color: none;
+    color: none;
+}
+
+#slider .noUi-connect {
+    background: none;
+
+
+}
+
+#slider .noUi-handle::before,
+#slider .noUi-handle::after {
+    display: none !important;
+}
+
+#slider .noUi-handle {
+    width: 22px !important;
+    height: 22px !important;
+    background-image: url('/assets/stop.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    border: none !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    border-radius: 15px !important;
+
 }
