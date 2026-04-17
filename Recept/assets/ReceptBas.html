@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="sv"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReceptBas</title>
+    <script defer="" src="./ReceptBas_files/javaoc.js"></script>
+    <link rel="stylesheet" href="./ReceptBas_files/style.css">
+
+    <link href="./ReceptBas_files/nouislider.min.css" rel="stylesheet">
+
+    <script src="./ReceptBas_files/nouislider.min.js"></script>
+
+<!-- Code injected by Five-server -->
+  <script async="" data-id="five-server" data-file="/Users/apamannen/ProgrammeringDelat/Yrgo/Klientprogrammering/GruppArbete/receptUI/Recept-UI-G4/Recept/index.html" type="application/javascript" src="./ReceptBas_files/fiveserver.js"></script>
+  <style>      
+      /* Injected by five-server */
+      /*[data-highlight="true"] {
+        border: 1px rgb(90,170,255) solid !important;
+        background-color: rgba(155,215,255,0.5);
+        animation: fadeOutHighlight 1s forwards 0.5s;
+      }
+      img[data-highlight="true"] {
+        filter: sepia(100%) hue-rotate(180deg) saturate(200%);
+        animation: fadeOutHighlightIMG 0.5s forwards 0.5s;
+      }*/
+      @keyframes fadeOutHighlight {
+        from {background-color: rgba(155,215,255,0.5);}
+        to {background-color: rgba(155,215,255,0);}
+      }      
+      @keyframes fadeOutHighlightIMG {
+        0% {filter: sepia(100%) hue-rotate(180deg) saturate(200%);}
+        33% {filter: sepia(66%) hue-rotate(180deg) saturate(100%);}
+        50% {filter: sepia(50%) hue-rotate(90deg) saturate(50%);}
+        66% {filter: sepia(33%) hue-rotate(0deg) saturate(100%);}
+        100% {filter: sepia(0%) hue-rotate(0deg) saturate(100%);}
+      }
+      @keyframes fiveserverInfoPopup {
+        0%   {top:-40px;}
+        15%  {top:4px;}
+        85%  {top:4px;}
+        100% {top:-40px;}
+      }
+      /*smaller*/
+      @media (max-width: 640px) {
+        #fiveserver-info-wrapper {
+          max-width: 98%;
+        }
+        #fiveserver-info {
+          border-radius: 0px;
+        }      
+      }
+
+      </style></head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>ReceptBas</h1>
+            <p class="h1-text">Sök, anpassa och planera menyer för hela sällskapet.</p>
+        </header>
+
+        <div class="main-input">
+            <input type="search" class="search-bar" name="search-result" im="" placeholder="Sök efter recept, teman och blanda ingredienser...">
+
+            <button class="but">sök</button>
+        </div>
+
+        <div class="drops">
+
+            <div class="meal">
+
+                <label>
+                    <h2>Måltidstyp</h2>
+
+                    <select class="dish">
+                        <option selected="">Huvudrätt</option>
+                        <option>Förätt</option>
+                        <option>Efterätt</option>
+                        <option>Tilltugg</option>
+                    </select>
+                </label>
+            </div>
+
+
+            <div class="meal">
+
+                <label class="totalperson">
+                    <h2>Antal personer</h2>
+
+                    <input type="text" placeholder="Antal personer..." class="total">
+
+                </label>
+            </div>
+
+            <div class="meal">
+
+                <label>
+                    <h2>Kostpreferens</h2>
+
+                    <select class="restriction">
+                        <option selected="">Peskitarian</option>
+                        <option>Vegan</option>
+                        <option>Kosher</option>
+                        <option>Halal</option>
+                        <option>Vegetarian</option>
+                    </select>
+                </label>
+            </div>
+
+
+            <div class="meal">
+
+                <label>
+                    <h2>Allergen</h2>
+
+                    <select class="allergen">
+                        <option selected="">Gluten</option>
+                        <option>Laktos</option>
+                        <option>Mjölkprotein</option>
+                        <option>Nötter</option>
+                        <option>Skaldjur</option>
+                    </select>
+                </label>
+
+            </div>
+        </div>
+
+        <div class="customize">
+            <div class="priceintervall">
+                <h2>Prisintervall</h2>
+                <div class="eyes-section">
+
+                    <img src="./ReceptBas_files/eyes.png" alt="eyes">
+                    <p>kr</p>
+                </div>
+            </div>
+
+            <div class="price-description">
+                <h3>Per Person</h3>
+                <h3 class="company">Hela Sällskapet</h3>
+            </div>
+
+            <div id="slider">
+            </div>
+
+            <div class="adaptablemeals">
+            </div>
+        </div>
+    </div>
+
+
+</body></html>

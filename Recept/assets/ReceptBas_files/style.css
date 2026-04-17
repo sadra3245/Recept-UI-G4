@@ -10,7 +10,7 @@ body {
     height: auto;
     background-color: grey;
     padding: 20px;
-    font-family: Montserrat, sans-serif;
+
 }
 
 
@@ -52,6 +52,7 @@ header>h1 {
     width: 436px;
     height: 34px;
     border-radius: 15px;
+    padding-inline-start: 17px;
     background-image: url(/assets/förstoringsglas.png);
     background-repeat: no-repeat;
     background-position: 7px 7px;
@@ -143,19 +144,19 @@ label {
 .eyes-section {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap :15px;
 }
 
 .price-description {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 30px;
+    gap:30px;
     margin-block-end: 5%;
 }
 
 .company {
-
+    
     color: #003D63CC !important;
 }
 
@@ -195,50 +196,4 @@ label {
     cursor: pointer !important;
     border-radius: 15px !important;
 
-}
-
-/* Card */
-
-.result-item {
-    display: flex;
-    flex-direction: row;
-    width: 600px;
-    height: 262px;
-    background-color: white;
-}
-
-.result-item h3 {
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-}
-
-.result-item p {
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-}
-
-.left-card {
-    display: flex;
-    flex-direction: column;
-    margin: 1%;
-    margin-inline-start: 3rem;
-}
-
-.right-card {
-    margin-inline: 1rem;
-    margin-block: 0.5rem;
-}
-
-.right-card div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 1%;
-}
-
-.bookmark {
-    width: 21px;
-    padding-block-end: 0.5rem;
 }

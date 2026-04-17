@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src="/style/javaoc.js"></script>
+    <title>ReceptBas</title>
     <link rel="stylesheet" href="/style/style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "vue": "https://unpkg.com/vue@3.5.28/dist/vue.esm-browser.js"
+            },
+            "integrity": {
+                "https://unpkg.com/vue@3.5.28/dist/vue.esm-browser.js": "sha384-Q3gg1uvxzo7j5a5zJyKw57OkLMyOhl1sGmQxxn63S3lsr8Ki3ACSKKSvK8zG//7D"
+            }
+        }
+    </script>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" rel="stylesheet">
 
@@ -15,7 +24,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="app">
 
         <header>
             <h1>ReceptBas</h1>
@@ -23,100 +32,119 @@
         </header>
 
         <div class="main-input">
-
-
-            <input type="search" class="search-bar" name="search-result" im
+            <input type="search" class="search-bar" name="search-result"
                 placeholder="Sök efter recept, teman och blanda ingredienser...">
 
-            <button class="but">sök</button>
+            <button class="but" @click="searchFunction">sök</button>
         </div>
 
         <div class="drops">
 
             <div class="meal">
 
-                <label>Måltidstyp
+                <h2>Måltidstyp</h2>
+                <label>
+
+                    <select class="dish">
+                        <option selected>Huvudrätt</option>
+                        <option>Förätt</option>
+                        <option>Efterätt</option>
+                        <option>Tilltugg</option>
+                    </select>
                 </label>
-
-                <select class="dish">
-                    <option selected>Huvudrätt</option>
-                    <option>Förätt</option>
-                    <option>Efterätt</option>
-                    <option>Tilltugg</option>
-                </select>
-            </div>
-
-
-            <div class="meal">
-
-                <label class="totalperson">Antal personer
-                </label>
-
-                <select class="total">
-                    <option selected>0-10</option>
-                    <option>10-20</option>
-                    <option>20-50</option>
-                    <option>50-100</option>
-                </select>
-
             </div>
 
             <div class="meal">
 
-                <label>Kostpreferens
+                <h2>Antal personer</h2>
+                <label class="totalperson">
+
+                    <input type="text" placeholder="Antal personer..." class="total">
+
                 </label>
-
-                <select class="restriction">
-                    <option selected>Peskitarian</option>
-                    <option>Vegan</option>
-                    <option>Kosher</option>
-                    <option>Halal</option>
-                    <option>Vegetarian</option>
-                </select>
             </div>
-
 
             <div class="meal">
 
-                <label>Allergen
-                </label>
+                <h2>Kostpreferens</h2>
+                <label>
 
-                <select class="allergen">
-                    <option selected>Gluten</option>
-                    <option>Laktos</option>
-                    <option>Mjölkprotein</option>
-                    <option>Nötter</option>
-                    <option>Skaldjur</option>
-                </select>
+                    <select class="restriction">
+                        <option selected>Peskitarian</option>
+                        <option>Vegan</option>
+                        <option>Kosher</option>
+                        <option>Halal</option>
+                        <option>Vegetarian</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="meal">
+
+                <h2>Allergen</h2>
+                <label>
+
+                    <select class="allergen">
+                        <option selected>Gluten</option>
+                        <option>Laktos</option>
+                        <option>Mjölkprotein</option>
+                        <option>Nötter</option>
+                        <option>Skaldjur</option>
+                    </select>
+                </label>
 
             </div>
         </div>
 
         <div class="customize">
             <div class="priceintervall">
-                <label>Prisintervall</label>
+                <h2>Prisintervall</h2>
                 <div class="eyes-section">
-                    
-                    <img src="/assets/eyes.png"><p>kr</p>
+
+                    <img src="/assets/eyes.png" alt="eyes">
+                    <p>kr</p>
                 </div>
             </div>
 
             <div class="price-description">
-                <label>Per Person</label>
-                <label class="company">Hela Sällskapet</label>
+                <h3>Per Person</h3>
+                <h3 class="company">Hela Sällskapet</h3>
             </div>
 
             <div id="slider">
-
-
             </div>
 
             <div class="adaptablemeals">
-
             </div>
         </div>
 
+        <div class="search-results">
+            <div v-for="item in searchResults" :key="item.id" class="result-item">
+                <div class="left-card">
+                    <h3>{{ item.title }}</h3>
+
+                    <p>{{ item.headIngredientText }} {{ item.headIngredients }}
+                        <img class="typeImage" :src="item.typeImage" :alt="item.typeTitle">
+                    </p>
+
+                    <div>
+                        <p>{{ item.allergenText }}</p>
+                        <p><img :src="item.cross" :alt="cross icon">{{ item.allergen1}}{{ item.allergen2 }}</p>
+                    </div>
+
+                    <p>{{ item.ingredientText }} {{ item.ingredients }}</p>
+                </div>
+                <div class="right-card">
+                    <div>
+                        <img :src="item.bookmark" alt="bookmark icon" class="bookmark">
+                        <img :src="item.image" alt="food">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script type="module" src="/scripts/javaoc.js"></script>
 </body>
+
 
 </html>
