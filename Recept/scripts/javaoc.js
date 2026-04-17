@@ -47,7 +47,7 @@ const app = {
                 typeImage: '/assets/fish.png',
                 typeTitle: "fish",
                 allergenText: "Uteslutna allergener:",
-                cross: "assets/cross.png",
+                cross: "/assets/cross.png",
                 allergen1: "Gluten",
                 allergen2: "Laktos",
                 ingredientText: "Ingredienser:",

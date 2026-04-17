@@ -21,6 +21,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
 
+    <script type="module" src="/scripts/javaoc.js"></script>
+
 </head>
 
 <body>
@@ -129,7 +131,7 @@
 
                     <div>
                         <p>{{ item.allergenText }}</p>
-                        <p><img :src="item.cross" :alt="cross icon">{{ item.allergen1}}{{ item.allergen2 }}</p>
+                        <p><img :src="item.cross" alt="cross icon">{{ item.allergen1}}{{ item.allergen2 }}</p>
                     </div>
 
                     <p>{{ item.ingredientText }} {{ item.ingredients }}</p>
@@ -143,7 +145,7 @@
             </div>
         </div>
     </div>
-    <script type="module" src="/scripts/javaoc.js"></script>
+    
 </body>
 
 
