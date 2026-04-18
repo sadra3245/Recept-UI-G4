@@ -1,25 +1,24 @@
-body {
-    background-color: lightsteelblue;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 .container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    max-width: 600px;
-    margin: auto;
-    height: auto;
-    background-color: grey;
-    padding: 20px;
     font-family: Montserrat, sans-serif;
 }
-
 
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 header>h1 {
@@ -67,7 +66,6 @@ header>h1 {
     outline: none;
 }
 
-
 .h1-text {
     font-size: 26px;
     width: 450px;
@@ -75,15 +73,12 @@ header>h1 {
     margin: 80px;
 }
 
-
 .drops {
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
     text-align: center;
 }
-
-
 
 .meal {
     display: flex;
@@ -107,7 +102,6 @@ header>h1 {
 
 }
 
-
 .restriction {
     width: 129px;
     height: 44px;
@@ -124,12 +118,10 @@ header>h1 {
 
 }
 
-
 label {
     font-size: 23px;
 
 }
-
 
 .priceintervall {
     display: flex;
@@ -205,6 +197,7 @@ label {
     width: 600px;
     height: 262px;
     background-color: white;
+    border-block-end: 1px solid grey;
 }
 
 .result-item h3 {
@@ -224,6 +217,45 @@ label {
     flex-direction: column;
     margin: 1%;
     margin-inline-start: 3rem;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title p {
+    max-width: fit-content;
+    color: #7E634E;
+    background: rgba(140, 93, 60, 0.25);
+    border-radius: 8px;
+    border: 1px solid #B8AA9F;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 3px 16px 3px 7px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.allergens {
+    display: flex;
+    flex-direction: row;
+}
+
+.allergens p {
+    max-width: fit-content;
+    margin-inline-end: 0.7rem;
+    color: #7E634E;
+    background: rgba(140, 93, 60, 0.25);
+    border-radius: 8px;
+    border: 1px solid #B8AA9F;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    padding: 3px 16px 3px 7px;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.cross {
+    padding-inline-end: 4px;
 }
 
 .right-card {

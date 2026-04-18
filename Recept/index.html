@@ -46,7 +46,6 @@
 
                 <h2>Måltidstyp</h2>
                 <label>
-
                     <select class="dish">
                         <option selected>Huvudrätt</option>
                         <option>Förätt</option>
@@ -57,13 +56,8 @@
             </div>
 
             <div class="meal">
-
                 <h2>Antal personer</h2>
-                <label class="totalperson">
-
-                    <input type="text" placeholder="Antal personer..." class="total">
-
-                </label>
+                <input type="text" placeholder="Antal personer..." class="total">
             </div>
 
             <div class="meal">
@@ -120,21 +114,46 @@
             </div>
         </div>
 
-        <div class="search-results">
+        <div v-if="hasSearched" class="search-results">
+            <div class="amount-of-results">
+                <p>Din sökning gav {{ searchResults.length }} träffar</p>
+                <label>
+                    Sorteras på:
+                    <select class="result-sort">
+                        <option selected>Kräftsäsong</option>
+                        <option>Kall</option>
+                        <option>Varm</option>
+                        <option>Snabblagad</option>
+                        <option>Beställningsvaror</option>
+                    </select>
+                </label>
+            </div>
             <div v-for="item in searchResults" :key="item.id" class="result-item">
+
                 <div class="left-card">
-                    <h3>{{ item.title }}</h3>
-
-                    <p>{{ item.headIngredientText }} {{ item.headIngredients }}
-                        <img class="typeImage" :src="item.typeImage" :alt="item.typeTitle">
-                    </p>
-
-                    <div>
-                        <p>{{ item.allergenText }}</p>
-                        <p><img :src="item.cross" alt="cross icon">{{ item.allergen1}}{{ item.allergen2 }}</p>
+                    <div class="card-title">
+                        <h3>{{ item.title }}</h3>
+                        <p><img :src="item.cross" alt="cross icon" class="cross">{{ item.dish }}</p>
                     </div>
 
-                    <p>{{ item.ingredientText }} {{ item.ingredients }}</p>
+                    <div class="card-head-ingredient">
+                        <p>{{ item.headIngredientText }} {{ item.headIngredients }}
+                            <img class="typeImage" :src="item.typeImage" :alt="item.typeTitle">
+                        </p>
+                    </div>
+
+                    <div class="card-allergen">
+                        <p>{{ item.allergenText }}</p>
+                        <div class="allergens">
+                            <p><img :src="item.cross" alt="cross icon" class="cross">{{ item.allergen1}}</p>
+                            <p><img :src="item.cross" alt="cross icon" class="cross">{{ item.allergen2 }}</p>
+                        </div>
+                    </div>
+
+                    <div class="card-ingredients">
+                        <p>{{ item.ingredientText }} {{ item.ingredients }}</p>
+                    </div>
+
                 </div>
                 <div class="right-card">
                     <div>
@@ -145,7 +164,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 
