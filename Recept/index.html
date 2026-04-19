@@ -30,7 +30,7 @@
 
         <header>
             <h1>ReceptBas</h1>
-            <p class="h1-text">Sök, anpassa och planera menyer för hela sällskapet.</p>
+            <p class="h1-text">Sök, anpassa och planera<br> menyer för hela sällskapet.</p>
         </header>
 
         <div class="main-input">
@@ -44,7 +44,7 @@
 
             <div class="meal">
 
-                <h2>Måltidstyp</h2>
+                <h2 class="h2-all">Måltidstyp</h2>
                 <label>
 
                     <select class="dish">
@@ -58,7 +58,7 @@
 
             <div class="meal">
 
-                <h2>Antal personer</h2>
+                <h2 class="h2-all">Antal personer</h2>
                 <label class="totalperson">
 
                     <input type="text" placeholder="Antal personer..." class="total">
@@ -68,7 +68,7 @@
 
             <div class="meal">
 
-                <h2>Kostpreferens</h2>
+                <h2 class="h2-all">Kostpreferens</h2>
                 <label>
 
                     <select class="restriction">
@@ -83,7 +83,7 @@
 
             <div class="meal">
 
-                <h2>Allergen</h2>
+                <h2 class="h2-all">Allergen</h2>
                 <label>
 
                     <select class="allergen">
@@ -97,28 +97,48 @@
 
             </div>
         </div>
-
         <div class="customize">
-            <div class="priceintervall">
-                <h2>Prisintervall</h2>
-                <div class="eyes-section">
 
-                    <img src="/assets/eyes.png" alt="eyes">
-                    <p>kr</p>
+            <div class="left-side-customize">
+                <div class="priceintervall">
+                    <h2 class="price">Prisintervall</h2>
+                    <div class="eyes-section">
+
+                        <img class="eye" src="/assets/eyes.png" alt="eyes">
+                        <p>kr</p>
+                    </div>
+                </div>
+
+                <div class="price-description">
+                    <h3 class="per">Per Person</h3>
+                    <h3 class="company">Hela Sällskapet</h3>
+                </div>
+
+
+                <div id="slider">
+                </div>
+
+            </div>
+            <div class="right-side-customize">
+
+
+                <div class="ph">
+
+                    <input class="checkbar" type="checkbox"></input>
+                    <h2 class="customh2">Anpassningsbara rätter</h2>
+                    <div class="divspan">
+
+                        <span class="customtext">Vegetarisk version</span>
+                        <br>
+                        <span class="customtext">Glutenfriversion</span>
+                    </div>
+                    <img class="customdrop" src="/assets/customdrop.png" alt="customdrop">
+
                 </div>
             </div>
-
-            <div class="price-description">
-                <h3>Per Person</h3>
-                <h3 class="company">Hela Sällskapet</h3>
-            </div>
-
-            <div id="slider">
-            </div>
-
-            <div class="adaptablemeals">
-            </div>
         </div>
+
+
 
         <div class="search-results">
             <div v-for="item in searchResults" :key="item.id" class="result-item">
@@ -145,7 +165,7 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 
 
