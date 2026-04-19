@@ -3,6 +3,8 @@ import { createApp, ref } from "vue";
 const app = {
     setup() {
 
+        const hasSearched = ref(false)
+
         const searchResults = ref([])
 
         const mockData = [
@@ -15,6 +17,7 @@ const app = {
                 typeImage: '/assets/fish.png',
                 typeTitle: "fish",
                 allergenText: "Uteslutna allergener:",
+                cross: "/assets/cross.png",
                 allergen1: "Gluten",
                 allergen2: "Laktos",
                 ingredientText: "Ingredienser:",
@@ -31,6 +34,7 @@ const app = {
                 typeImage: '/assets/fish.png',
                 typeTitle: "fish",
                 allergenText: "Uteslutna allergener:",
+                cross: "/assets/cross.png",
                 allergen1: "Gluten",
                 allergen2: "Laktos",
                 ingredientText: "Ingredienser:",
@@ -58,10 +62,11 @@ const app = {
         ]
 
         const searchFunction = () => {
+            hasSearched.value = true
             searchResults.value = [...mockData]
         }
 
-        return { searchResults, searchFunction }
+        return { searchResults, hasSearched, searchFunction }
     }
 }
 
