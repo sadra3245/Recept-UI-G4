@@ -79,9 +79,12 @@ header>h1 {
 
 .h1-text {
     font-size: 26px;
-    width: 450px;
+    width: 440px;
     height: 30px;
-    margin: 80px;
+    padding-inline-start: 25px;
+    margin-block-end: 100px;
+    margin-block-start: 25px;
+    text-align: center;
 }
 
 
@@ -227,15 +230,14 @@ label {
 
 .ph {
     font-family: Montserrat;
-    width: 220px;
     font-weight: 500;
     font-size: 12px;
     display: flex;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-inline-start: 70px;
-    padding-block-start: 40px;
+    padding-inline-start:75px;
+    padding-block-start: 55px;
 }
 
 .customh2 {
