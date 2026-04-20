@@ -119,6 +119,7 @@ header>h1 {
     text-align: center;
 
 }
+
 .total {
     width: 120px;
     height: 43px;
@@ -236,18 +237,28 @@ label {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-inline-start:75px;
-    padding-block-start: 55px;
+    padding-inline-start: 35px;
+    padding-block-start: 35px;
+}
+
+
+.customheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 55px;
+    padding-block-start: 30px;
 }
 
 .customh2 {
     margin-block: 3%;
+    font-size: 17px;
 }
 
 
 .customtext {
     font-weight: 700;
-    font-size: 12px;
+    font-size: 17px;
 
 }
 
@@ -290,7 +301,7 @@ label {
 #slider .noUi-handle {
     width: 22px !important;
     height: 22px !important;
-    background-image: url('/assets/stop.png') !important;
+    background-image: url('/Recept/assets/stop.png') !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;

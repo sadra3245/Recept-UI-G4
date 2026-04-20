@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReceptBas</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="style/style.css">
     <script type="importmap">
         {
             "imports": {
@@ -21,7 +21,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
 
-    <script type="module" src="/scripts/javaoc.js"></script>
+    <script type="module" src="scripts/javaoc.js"></script>
 
 </head>
 
@@ -103,7 +103,7 @@
                     <h2 class="price">Prisintervall</h2>
                     <div class="eyes-section">
 
-                        <img class="eye" src="/assets/eyes.png" alt="eyes">
+                        <img class="eye" src="assets/eyes.png" alt="eyes">
                         <p>kr</p>
                     </div>
                 </div>
@@ -120,19 +120,24 @@
             </div>
             <div class="right-side-customize">
 
+                <div class="customheader">
 
-                <div class="ph">
-
-                    <input class="checkbar" type="checkbox"></input>
+                    <input v-model="isCheckBoxed" @change="searchDrop" class="checkbar" type="checkbox"></input>
                     <h2 class="customh2">Anpassningsbara rätter</h2>
-                    <div class="divspan">
+                </div>
+                <div v-if="isCheckBoxed">
 
-                        <span class="customtext">Vegetarisk version</span>
-                        <br>
-                        <span class="customtext">Glutenfriversion</span>
+                    <div v-for="data in customizedDrop" class="ph">
+
+                        <div class="divspan">
+
+                            <span class="customtext">{{ data.title }}</span>
+                            <br>
+                            <span class="customtext">{{ data.title2 }}</span>
+                        </div>
+                        <img class="customdrop" :src="data.picture" alt="customdrop">
+
                     </div>
-                    <img class="customdrop" src="/assets/customdrop.png" alt="customdrop">
-
                 </div>
             </div>
         </div>
