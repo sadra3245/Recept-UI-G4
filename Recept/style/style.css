@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -22,20 +24,24 @@ header {
 }
 
 header>h1 {
-    font-size: 50px;
+    font-size: 32px;
     margin-block-end: 0px;
+    font-weight: 400;
 }
 
 .h1-text {
     display: flex;
     align-self: center;
     justify-self: center;
-    font-size: 26px;
-    width: 320px;
-    height: 20px;
-    margin-block-end: 80px;
+    font-size: 16px;
+    font-weight: 400;
+    width: 400px;
+    height: 30px;
+    padding-inline-start: 25px;
+    margin-block-end: 100px;
+    margin-block-start: 25px;
+    text-align: center;
 }
-
 
 .main-input {
     display: flex;
@@ -44,16 +50,15 @@ header>h1 {
     justify-content: center;
     align-items: center;
     margin-block-end: 35px;
-
 }
 
 .but {
     background-color: #FFD6A7;
     border-radius: 50px;
     padding: 15px 25px;
+    border: none;
     font-weight: bold;
 }
-
 
 .search-bar {
     display: flex;
@@ -62,7 +67,7 @@ header>h1 {
     width: 436px;
     height: 34px;
     border-radius: 15px;
-    background-image: url(/assets/förstoringsglas.png);
+    background-image: url(assets/förstoringsglas.png);
     background-repeat: no-repeat;
     background-position: 7px 7px;
     padding-inline-start: 37px;
@@ -76,17 +81,6 @@ header>h1 {
 .search-bar:focus {
     outline: none;
 }
-
-.h1-text {
-    font-size: 26px;
-    width: 440px;
-    height: 30px;
-    padding-inline-start: 25px;
-    margin-block-end: 100px;
-    margin-block-start: 25px;
-    text-align: center;
-}
-
 
 .drops {
     display: flex;
@@ -111,22 +105,16 @@ header>h1 {
 
 .total {
     width: 120px;
-    height: 44px;
-    border-radius: 10px;
-    text-align: center;
-
-}
-
-.total {
-    width: 120px;
     height: 43px;
     padding: 0;
     margin: 0;
-
+    text-align: center;
+    border-radius: 10px;
 }
 
 .h2-all {
     font-size: 15px;
+    font-weight: 400;
 }
 
 .restriction {
@@ -218,13 +206,12 @@ label {
 
 }
 
-
 .checkbar[type="checkbox"] {
     width: 25px;
 }
 
 .ph {
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 12px;
     display: flex;
@@ -296,12 +283,31 @@ label {
 
 }
 
+/* Results */
+
+.amount-of-results {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.amount-of-results p {
+    margin-inline-start: 0.5rem;
+    margin-inline-end: 1rem;
+}
+
+.amount-of-results label {
+    margin-block-start: 2px;
+    font-size: 15px;
+}
+
 /* Card */
 
 .result-item {
     display: flex;
     flex-direction: row;
-    width: 600px;
+    width: auto;
     height: 262px;
     background-color: white;
     border-block-end: 1px solid grey;
@@ -309,7 +315,6 @@ label {
 
 .result-item h3 {
     font-size: 24px;
-    font-style: normal;
     font-weight: 600;
 }
 
@@ -328,11 +333,12 @@ label {
 .card-title {
     display: flex;
     flex-direction: column;
+    margin-inline-start: 1rem;
+    margin-block-start: 1rem;
 }
 
 .card-title h3 {
     margin: 0;
-    margin-block-start: 2rem;
 }
 
 .card-title p {
@@ -347,8 +353,21 @@ label {
     font-weight: 600;
 }
 
-.card-head-ingredients p {
-    margin: 1rem;
+.card-head-ingredient {
+    margin-inline-start: 0.7rem;
+    margin-block-start: 0.5rem;
+}
+
+.card-head-ingredient p {
+    margin: 0;
+}
+
+.card-allergen {
+    margin-inline-start: 0.7rem;
+}
+
+.card-allergen p {
+    margin-block-end: 0.5rem;
 }
 
 .allergens {
@@ -358,6 +377,7 @@ label {
 
 .allergens p {
     max-width: fit-content;
+    margin: 0;
     margin-inline-end: 0.7rem;
     color: #7E634E;
     background: rgba(140, 93, 60, 0.25);
@@ -373,8 +393,13 @@ label {
     padding-inline-end: 4px;
 }
 
+.card-ingredients {
+    margin-inline-start: 0.7rem;
+}
+
 .right-card {
-    margin-inline: 1rem;
+    margin-inline-start: 1rem;
+    margin-inline-end: 0.5rem;
     margin-block: 0.5rem;
 }
 
