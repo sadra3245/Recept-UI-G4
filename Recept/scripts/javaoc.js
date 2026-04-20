@@ -14,16 +14,16 @@ const app = {
                 dish: "Buffé",
                 headIngredientText: "Huvudingrediens:",
                 headIngredients: "Fisk & skaldjur",
-                typeImage: '/assets/fish.png',
+                typeImage: 'assets/fish.png',
                 typeTitle: "fish",
                 allergenText: "Uteslutna allergener:",
-                cross: "/assets/cross.png",
+                cross: "assets/cross.png",
                 allergen1: "Gluten",
                 allergen2: "Laktos",
                 ingredientText: "Ingredienser:",
                 ingredients: "Musslor, kräftor, sjögurka, lax, vitfisk, sparris",
-                bookmark: '/assets/bookmark.png',
-                image: '/assets/seafoodplatter.png'
+                bookmark: 'assets/bookmark.png',
+                image: 'assets/seafoodplatter.png'
             },
             {
                 id: 2,
@@ -31,16 +31,16 @@ const app = {
                 dish: "Buffé",
                 headIngredientText: "Huvudingrediens:",
                 headIngredients: "Fisk & skaldjur",
-                typeImage: '/assets/fish.png',
+                typeImage: 'assets/fish.png',
                 typeTitle: "fish",
                 allergenText: "Uteslutna allergener:",
-                cross: "/assets/cross.png",
+                cross: "assets/cross.png",
                 allergen1: "Gluten",
                 allergen2: "Laktos",
                 ingredientText: "Ingredienser:",
                 ingredients: "Saffran, ris, räkor, kräftor, musslor, ärtor",
-                bookmark: '/assets/bookmark.png',
-                image: '/assets/paella.png'
+                bookmark: 'assets/bookmark.png',
+                image: 'assets/paella.png'
             },
             {
                 id: 3,
@@ -48,16 +48,16 @@ const app = {
                 dish: "Buffé",
                 headIngredientText: "Huvudingrediens:",
                 headIngredients: "Fisk & skaldjur",
-                typeImage: '/assets/fish.png',
+                typeImage: 'assets/fish.png',
                 typeTitle: "fish",
                 allergenText: "Uteslutna allergener:",
-                cross: "/assets/cross.png",
+                cross: "assets/cross.png",
                 allergen1: "Gluten",
                 allergen2: "Laktos",
                 ingredientText: "Ingredienser:",
                 ingredients: "Glutenfritt rågbröd, räkor, kräftstjärtar, citron, äggfrimajonäs, dill",
-                bookmark: '/assets/bookmark.png',
-                image: '/assets/shrimpsandwich.png'
+                bookmark: 'assets/bookmark.png',
+                image: 'assets/shrimpsandwich.png'
             },
         ]
 

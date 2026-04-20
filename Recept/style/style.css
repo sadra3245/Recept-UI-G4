@@ -95,9 +95,6 @@ header>h1 {
     text-align: center;
 }
 
-
-
-
 .meal {
     display: flex;
     flex-direction: column;
@@ -119,6 +116,7 @@ header>h1 {
     text-align: center;
 
 }
+
 .total {
     width: 120px;
     height: 43px;
@@ -126,9 +124,6 @@ header>h1 {
     margin: 0;
 
 }
-
-
-
 
 .h2-all {
     font-size: 15px;
@@ -236,7 +231,7 @@ label {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-inline-start:75px;
+    padding-inline-start: 75px;
     padding-block-start: 55px;
 }
 
@@ -327,13 +322,17 @@ label {
 .left-card {
     display: flex;
     flex-direction: column;
-    margin: 1%;
-    margin-inline-start: 3rem;
+    margin: auto;
 }
 
 .card-title {
     display: flex;
     flex-direction: column;
+}
+
+.card-title h3 {
+    margin: 0;
+    margin-block-start: 2rem;
 }
 
 .card-title p {
@@ -346,6 +345,10 @@ label {
     padding: 3px 16px 3px 7px;
     font-size: 10px;
     font-weight: 600;
+}
+
+.card-head-ingredients p {
+    margin: 1rem;
 }
 
 .allergens {
