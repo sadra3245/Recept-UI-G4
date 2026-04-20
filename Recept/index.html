@@ -34,10 +34,18 @@
         </header>
 
         <div class="main-input">
+            <img src="assets/searchglass.png" alt="magnifying glass" class="mag-glass">
             <input type="search" class="search-bar" name="search-result"
                 placeholder="Sök efter recept, teman och blanda ingredienser...">
 
             <button class="but" @click="searchFunction">sök</button>
+        </div>
+
+        <div class="pills">
+            <p><img src="assets/cross.png" alt="cross icon" class="cross">Fisk</p>
+            <p><img src="assets/cross.png" alt="cross icon" class="cross">Glutenfri</p>
+            <p><img src="assets/cross.png" alt="cross icon" class="cross">Buffé</p>
+            <p><img src="assets/cross.png" alt="cross icon" class="cross">10 personer</p>
         </div>
 
         <div class="drops">
@@ -56,13 +64,8 @@
             </div>
 
             <div class="meal">
-
                 <h2 class="h2-all">Antal personer</h2>
-                <label class="totalperson">
-
-                    <input type="text" placeholder="Antal personer..." class="total">
-
-                </label>
+                <input type="text" placeholder="Antal personer..." class="total">
             </div>
 
             <div class="meal">
@@ -147,7 +150,7 @@
                 <p>Din sökning gav {{ searchResults.length }} träffar</p>
                 <label>
                     Sorteras på:
-                    <select class="result-sort">
+                    <select name="sort" class="result-sort">
                         <option selected>Kräftsäsong</option>
                         <option>Kall</option>
                         <option>Varm</option>
