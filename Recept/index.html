@@ -34,10 +34,18 @@
         </header>
 
         <div class="main-input">
+            <img src="assets/searchglass.png" alt="magnifying glass" class="mag-glass">
             <input type="search" class="search-bar" name="search-result"
                 placeholder="Sök efter recept, teman och blanda ingredienser...">
 
             <button class="but" @click="searchFunction">sök</button>
+        </div>
+
+        <div class="pills">
+            <p><img src="assets/cross.png" alt="cross icon" class="cross">Fisk</p>
+            <p><img src="assets/cross.png" alt="cross icon" class="cross">Glutenfri</p>
+            <p><img src="assets/cross.png" alt="cross icon" class="cross">Buffé</p>
+            <p><img src="assets/cross.png" alt="cross icon" class="cross">10 personer</p>
         </div>
 
         <div class="drops">
@@ -123,8 +131,7 @@
                     <div class="divspan">
 
                         <span class="customtext">Vegetarisk version</span>
-                        <br>
-                        <span class="customtext">Glutenfriversion</span>
+                        <span class="customtext">Glutenfri version</span>
                     </div>
                     <img class="customdrop" src="assets/customdrop.png" alt="customdrop">
 
